@@ -19,10 +19,10 @@ body{
 
 .border{
     border: 1px solid transparent;
-    height: 100px;
+    height: 60px;
     display: grid;
     place-items: center;
-    padding: 20px;
+    padding: 5px 10px 5px 10px;
 }
 
 .border:hover{
@@ -121,6 +121,187 @@ body{
     font-size: 30px;
 }
 
+/* panel kısmı */
+.panel{
+    height: 40px;
+    width: 100%;
+    background-color: #212f3d ;
+    color: white;
+    display: flex;
+    align-items:center ;
+    justify-content: space-evenly;
+}
+.panel-all i {
+    cursor: pointer;
+}
+.panel-all span {
+    font-family: "Poppins";
+}
+.panel-ops{
+    width: 70%;
+    font-size: 14px;
+    cursor: pointer;
+}
+.panel-ops p {
+    display: inline-flex;
+    height: 25px;
+    padding: 0 3px;
+    margin-left: 15px;
+}
+.panel-deals{
+    padding: 0 3px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+/* Hero section */
+.hero-section{
+    background-image: url("./assets/hero_image.jpg");
+    height: 350px;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+.hero-msg {
+    background-color: #ffff;
+    width: 80%;
+    height: 40px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+    font-size: 14px;
+}
+.hero-msg a {
+    margin-left: 5px;
+    color: #92bdc6;
+}
+
+/* Category Kısmı */
+
+.category-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    background-color: #e2e7e6;
+    padding: 20px;
+}
+.box {
+    height: 440px;
+    background-color: #ffff;
+    padding: 20px 15px;
+    margin-top: 15px;
+}
+.box a {
+    color: #000;
+    margin-top: 10px;
+}
+.box h2 {
+    white-space: nowrap;
+}
+.box-image{
+    height: 300px;
+    width: 100%;
+}
+.box-image img {
+    width: 100%;
+    height: 100%;
+}
+    /* Discount Section */
+.discount-container{
+   background-color: #e2e7e6;
+   padding: 20px;
+}
+.title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 30px;
+}
+.title a {
+    color: #476f78;
+    transition: all 0.5s;
+}
+.title a:hover {
+    text-decoration: underline;
+}
+.boxes {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-evenly;
+    margin: 15px 0 ;
+}
+.discount-box {
+    height: 330px;
+    background-color: #ffff;
+    padding: 10px 20px;
+}
+.discount-box .img img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+.discount-box-content p {
+    color: crimson;
+    font-size: 15px;
+    white-space: nowrap;
+}
+.discount-box-content p span{
+    background-color: crimson;
+    color: white;
+    margin-right: 6px;
+    font-size: 13px;
+}
+.discount-box p {
+    margin: 5px 0;
+}
+.foot-panel-top {
+    background-color: #364759;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.foot-panel-top a {
+    color: #ffff;
+    font-size: 16px;
+}
+.foot-panel-bottom {
+    background-color: #0f1111;
+    height: 320px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 20px;
+    gap: 20px;
+}
+.footer-list {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+    color: white;
+    font-size: 20px;
+}
+.footer-list a {
+    color: rgb(200,200,200);
+    font-size: 13px;
+}
+.footer-list a:hover {
+    color: #fabd68;
+}
+
+
+
+
+
+
+
+
+
 /* Responsive tasarım */
 @media (max-width:1200px){
     .nav-signin {
@@ -129,9 +310,48 @@ body{
     .nav-adress{
         display: none;
     }
+    .panel-ops p {
+        display: none;
+    }
+
+    .panel-all,
+    .panel-deals {
+    white-space: nowrap;
+    padding: 0 10px;
+    }
+    .logo {
+        display: flex;
+        justify-content: center;
+    }
+    .nav-search{
+        width: 500px;
+    }
+    .category-container{
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 @media (max-width:950px) {
     .nav-cart{
         display: none;
+    }
+    .category-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width:800px) {
+    .foot-panel-bottom {
+        grid-template-columns: 1fr;
+    }
+    .footer-list {
+        display:flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+        font-size: 18px;
+    }
+}
+@media (max-width:680px) {
+    .category-container{
+        grid-template-columns: repeat(1, 1fr);
     }
 }
